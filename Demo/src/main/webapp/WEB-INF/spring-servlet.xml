@@ -21,7 +21,12 @@
 	
 	</bean>
 	
-	<mvc:resources mapping="/webjars/**" location="/webjars/"/>
+	
+	
+	
+	<bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+	
+	<mvc:resources mapping="/webjars/**" location="/WEB-INF/webjars/"/>
 	    
 	    
 	    

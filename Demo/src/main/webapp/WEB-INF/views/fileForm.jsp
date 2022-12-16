@@ -1,4 +1,3 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,34 +8,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-	<link href="<c:url value="webjars/css/style.css" />">
-	<script src="<c:url value="webjars/js/script.js" />"></script>
-	
-    <title>Search-Form</title>
+    <title>Upload Image</title>
   </head>
   <body>
-  
-  <img alt="myImage" src="<c:url value="/webjars/images/download.jpeg" />">
-   	
-   	<div class="container">
-   		<div class="card mx-auto mt-5 bg-secondary" style="width: 50%;">
-   			<div class="card-body py-5">
-   				<h3 class="text-center text-white" style="text-transform: uppercase">Search Box</h3>
-   				
-   				<form  action="search" class="mt-5">
-  					<div class="form-group">
-  					 	<input type="text" class="form-control" 
-  					 			name="queryBox" placeholder="Enter Your Keyword"/>
-  					 </div>
-  					 <div class="container text-center">
-  					 	<button type="submit" class="btn btn-outline-light">Submit</button>
-  					 </div>
-  				</form>	
-   			
-   			</div>
-   		</div>
-   	
-   	</div>
+  	<div class="container p-5">
+    	<h1>Upload Image</h1>
+    	<form action="uploaded" method="post" enctype="multipart/form-data">
+		  <div class="form-group">
+		    <label for="exampleFormControlFile1">Select Your Image</label>
+		    <input name="profile" type="file" class="form-control-file" id="exampleFormControlFile1">
+		  </div>
+		  
+		  <button class="btn btn-outline-success">Upload</button>
+		</form>
+   </div> 
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>  
 <!doctype html>
 <html lang="en">
   <head>
@@ -18,6 +19,9 @@
 		   		<div class="card">
 		   			<div class="card-body">
 		   				<h3 class="text-center">Form</h3>
+		   				<div class="alert alert-danger" role="alert">
+  							<form:errors path="student.*" />
+						</div>
 		   				
 		   				<form  action="handle" method="post">
 		   				
